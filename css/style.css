@@ -1,0 +1,65 @@
+:root {
+            --pearl-aqua: #99d5c9;
+            --pacific-blue: #6c969d;
+            --dusty-grape: #645e9d;
+            --dark-amethyst: #392b58;
+            --coffe-bean: #13010d;
+            --kirmizi: #e63946;
+            --koyu-kirmizi : #bd2a36;
+            --acik-kirmizi : rgba(230, 57, 70, 0.1);
+            --koyu-laciver: #111827;
+            --gri-metin : #4b5563;
+            --beyaz: #ffffff;;
+            --gecis: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            /* Gradient hali
+            background: linear-gradient(90deg, var(--dark-amethyst), var(--pacific-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            */
+            /* "Projeksiyon hali*/
+            color: #4f26a843;
+            letter-spacing: .15em;
+            text-shadow: -1px 1px 1px #6c969d14, 
+            -1px 2px 2px #6c969d14, 
+            -2px 4px 3px #6c969d14,
+             -3px 6px 4px #6c969d14, 
+             -4px 8px 5px #6c969d14, 
+             -5px 10px 6px #6c969d14, 
+             -6px 12px 7px #6c969d14;
+             
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: var(--dark-amethyst);
+            line-height: 1.7;
+            background: var(--coffe-bean);
+            overflow-x: hidden;
+        }
+
+        .container{
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .bolum.boslugu {
+            padding: 100 0;
+        }
