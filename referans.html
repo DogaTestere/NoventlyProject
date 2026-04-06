@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/LED.css">
+    <link rel="stylesheet" href="css/hologram.css"
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
@@ -13,10 +15,7 @@
     <h1> Düğmeler: </h1>
     <div style="display: flex; flex-direction: row;">
         <button class="led-button">
-            <a href="LED.html">LED</a>
-        </button>
-        <button class="projeksiyon-button">
-            <a href="projeksiyon.html">Projeksiyon</a>
+            <a href="/LED/LED.html">LED</a>
         </button>
         <button class="hologram-button">
             <a href="hologram.html">Hologram</a>
@@ -25,5 +24,18 @@
             <a href="drones.html">Drones</a>
         </button>
     </div>
+    <h1> Formlar: </h1>
+    <div style="display: flex; flex-direction: row;">
+        <form class="led-form">
+            <div class="form-group">
+                <label for="name">Adınız:</label>
+                <input class="led-input" type="text" placeholder="Adınız">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input class="led-input" type="email" placeholder="Email">
+            </div>
+            <button class="led-button" type="submit">Gönder</button>
+        </form>
 </body>
 </html>
