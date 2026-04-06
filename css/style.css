@@ -10,6 +10,8 @@
             --koyu-laciver: #111827;
             --gri-metin : #4b5563;
             --beyaz: #ffffff;;
+            --led-aksan-spectral-lime: #CCFF00;
+            --led-aksan-cyber-cyan: #00F3FF;
             --gecis: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -62,4 +64,28 @@
 
         .bolum.boslugu {
             padding: 100 0;
+        }
+
+        a {
+            font-family: 'Inter', sans-serif;
+            color: var(--dusty-grape);
+            text-decoration: none;
+            transition: var(--gecis);
+        }
+
+        
+
+        .led-button {
+            border: 1px solid;
+            border-image-source: linear-gradient(45deg, var(--led-aksan-spectral-lime), var(--led-aksan-cyber-cyan));
+            border-image-slice: 1;
+        }
+
+        button {
+            margin: 20px 20px;
+            background: var(--dark-amethyst);
+            color: var(--beyaz);
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: var(--gecis);
         }
