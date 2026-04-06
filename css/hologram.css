@@ -1,0 +1,120 @@
+:root {
+  --text: #DFB7FF;
+  --pink-neon: #FF71CE;
+  --blue-neon: #01CDFE;
+  --purple-neon: #B967FF;
+  --holo-glow: #99D5C9;
+  --holo-glow-dim: rgba(153, 213, 201, 0.08);
+  --holo-glow-mid: rgba(153, 213, 201, 0.15);
+  --holo-border: rgba(153, 213, 201, 0.2);
+  --holo-card-bg: rgba(255, 255, 255, 0.03);
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  8% {
+    opacity: 0.9;
+  }
+  10% {
+    opacity: 0.2;
+  }
+  12% {
+    opacity: 1;
+  }
+  48% {
+    opacity: 0.95;
+  }
+  52% {
+    opacity: 0.15;
+  }
+  54% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  92% {
+    opacity: 0.3;
+  }
+  94% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.hologram .flicker {
+  animation: flicker 4s infinite;
+  color: var(--holo-glow);
+}
+
+.hologram p {
+  color: var(--text);
+}
+
+.hologram .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  border-bottom: 1px solid var(--pink-neon);
+}
+
+.hologram .showcase {
+  padding: 60px 40px;
+}
+.hologram .showcase-table {
+  display: flex;
+  justify-content: center;
+}
+.hologram .showcase-card {
+  border: 1px solid var(--holo-border);
+  background: var(--holo-card-bg);
+  border-radius: 8px;
+  padding: 16px;
+}
+.hologram .showcase-card:hover {
+  border-color: var(--holo-glow);
+  background: var(--holo-glow-dim);
+}
+
+.hologram .show-date {
+  font-size: 0.85rem;
+  color: var(--blue-neon);
+  margin-bottom: 8px;
+}
+.hologram .show-desc {
+  font-size: 0.95rem;
+  color: var(--pink-neon);
+}
+
+.hologram .clients {
+  padding: 80px 40px;
+}
+
+.hologram .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 40px;
+  border-top: 1px solid var(--blue-neon);
+}
+.hologram .logo-footer {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  background: linear-gradient(90deg, var(--pink-neon), var(--blue-neon);
+}
+.hologram .navbar-footer ul {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+.hologram .navbar-footer a {
+  color: var(--purple-neon);
+  text-decoration: none;
+}
+.hologram .footer-copy {
+  font-size: 0.8rem;
+}
