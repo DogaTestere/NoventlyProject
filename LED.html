@@ -11,23 +11,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LEDS</title>
 </head>
-<body>
-     <header class="header">
+<body class="led-body">
+     <header class="header led-header">
       <div class="logo-area">
-        <img src="assests/logo.png" alt="logo" />
+        <h1 class="logo">Visually</h1>
       </div>
       <nav>
         <ul>
           <li><a href="./index.html">Anasayfa</a></li>
           <li><a href="">Drone Showları</a></li>
-          <li><a href="/LED/LED.html">LED Ekranlar</a></li>
+          <li><a href="LED.html">LED Ekranlar</a></li>
         </ul>
       </nav>
     </header>
 
     <section class="bg-video-container">
-      <video autoplay muted loop playsinlibe class="bg-video">
-        <source src="assests/LED/DilanKöse1.mp4">
+      <video autoplay loop playsinlibe class="bg-video">
+        <source src="assests/LED/DilanKöse2.mp4">
         Tarayıcınız bu vidyo etiketini desteklemiyor.
       </video>
 
@@ -37,19 +37,69 @@
       </div>
     </section>
 
-     <footer>
-      <div class="logo-footer">Visually</div>
-      <nav class="navbar-footer">
-        <ul>
-          <li><a href="">Çerez Politikası</a></li>
-          <li><a href="">KVKK</a></li>
-          <li><a href="">Gizlilik Politikası</a></li>
-          <li><a href="">Çerez Tercihleri</a></li>
-        </ul>
-      </nav>
+    <h2 class="carousel-title">Müşterilerimiz</h2>
+    <section class="led-customers-carousel">
+      <div class="carousel">
+        <div class="carousel-item">
+          <div class="carousel-image-container">
+            <img class="carousel-image" src="assests/LED/DilanKöseProfil.jpg" alt="Ecem Dilan Köse">
+          </div>
+          <a class="info" href="https://www.instagram.com/ecemdilankose/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i> Ecem Dilan Köse
+          </a>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-image-container">
+            <img class="carousel-image" src="assests/LED/UmutProfil.jpg" alt="Umut Müezinoğlu">
+          </div>
+          <a class="info" href="https://www.instagram.com/umutmuezzinoglu/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i> Umut Müezinoğlu </a>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-image-container">
+            <img class="carousel-image" src="assests/LED/MeltemProfil.jpg" alt="Meltem Şahin">
+          </div>
+          <a class="info" href="https://www.instagram.com/meltemsahin___/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i> Meltem Şahin </a>
+        </div>
+      </div>
+    </section>
+
+
+    <footer style="display: flex; justify-content: space-between;">
+    <div>
+      <h1 class="led-logo">Visually</h1>
+      <h3>İletişime geçin</h3>
+      <div style="display: flex; flex-direction: row;">
+        <form class="led-form">
+            <div class="form-group">
+                <label for="name">Adınız:</label>
+                <input class="led-input" type="text" placeholder="Adınız">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input class="led-input" type="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="message">Mesajınız:</label>
+                <textarea class="led-input" placeholder="Mesajınız"></textarea>
+            </div>
+            <button class="led-button" type="submit">Gönder</button>
+        </form>
+      </div>
+    </div>
+    <nav class="navbar-footer">
+      <ul>
+        <li><a href="">Çerez Politikası</a></li>
+        <li><a href="">KVKK</a></li>
+        <li><a href="">Gizlilik Politikası</a></li>
+        <li><a href="">Çerez Tercihleri</a></li>
+      </ul>
       <p class="footer-copy">
-        ©2026 Visually Entertainment tüm hakları saklıdır
-      </p>
-    </footer>
+      ©2026 Visually Entertainment tüm hakları saklıdır
+    </p>
+    </nav>
+    
+  </footer>
 </body>
 </html>

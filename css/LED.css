@@ -72,11 +72,12 @@
 }
 
 .content {
-    border: 0.5px solid white;
+    border: 1px solid;
+    border-image-source: linear-gradient(45deg, var(--led-aksan-spectral-lime), var(--led-aksan-cyber-cyan));
+    border-image-slice: 1;
     margin-top: auto;
     margin-bottom: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
+    background: rgba(86, 47, 126, 0.1);
     backdrop-filter: blur(5px);
     position: relative;
     z-index: 3;
@@ -90,4 +91,82 @@
 
 .led-p {
     text-shadow: 0px 0px 0.7px white;
+}
+
+.led-header {
+    background: linear-gradient(0deg, var(--coffe-bean), #3c0329);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+label {
+    width: 100px;
+    color: var(--beyaz);
+    font-weight: bold;
+}
+
+input {
+    flex: 1;
+    max-width: 300px;
+}
+
+.led-logo {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;           
+    margin-bottom: 20px;
+    text-shadow: -1px -1px 0px var(--led-aksan-cyber-cyan), 1px 1px 0px var(--led-aksan-spectral-lime);
+}
+
+.led-customers-carousel {
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+}
+
+.carousel-image-container {
+    flex: 0 0 auto;
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid;
+    border-image-source: linear-gradient(45deg, var(--led-aksan-spectral-lime), var(--led-aksan-cyber-cyan));
+    border-image-slice: 1;
+}
+
+.carousel-image {
+    transition: ;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.info {
+    transition: var(--gecis);
+    opacity: 0;
+}
+
+.carousel-item:hover .info {
+    transition: var(--gecis);
+    opacity: 1;
+}
+
+.carousel-item:hover .carousel-image-container {
+    transition: var(--gecis);
+    border-image-source: linear-gradient(45deg, var(--led-aksan-cyber-cyan), var(--led-aksan-spectral-lime));
+    box-shadow: -1px 1px 5px var(--led-aksan-cyber-cyan), 1px -1px 5px var(--led-aksan-spectral-lime);
 }
