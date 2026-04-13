@@ -81,6 +81,7 @@ input {
     padding: 20px 0;
     background: linear-gradient(0deg, var(--coffe-bean), #3c0329);
     margin-bottom: 20px;
+    border-bottom: 2px solid var(--dark-amethyst);
 }
 
 .carousel-ul {

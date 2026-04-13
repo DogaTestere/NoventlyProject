@@ -3,21 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drone Show</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/drone.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <!-- MENÜ -->
-<header>
-    <nav class="navbar">
-        <h1 class="logo">DRON ŞOV</h1>
-        <ul>
-            <li><a href="#">Ana Sayfa</a></li>
-            <li><a href="#drone">Drone Şov</a></li>
-        </ul>
-    </nav>
-</header>
+<header class="header">
+            <div class="logo-area">
+                <h1 class="logo">Visually</h1>
+            </div>
+            <nav>
+                <ul>  
+                    <li><a href="index.html">Anasayfa</a></li>
+                    <li><a href="drone.html">Drone Showları</a></li>
+                    <li><a href="LED.html">LED Ekranlar</a></li>
+                    <li><a href="hologram.html">Hologram Sistemleri</a></li>
+                </ul>
+            </nav>
+        </header>
 
 <!-- DRONE SHOW BÖLÜMÜ -->
 <section id="drone" class="drone-section">
@@ -89,6 +98,41 @@
 <div class="drone-animation">
     <div id="animation-area"></div>
 </div>
+        <footer class="footer">
+            <div>
+                <h1 class="logo">Visually</h1>
+                <h3>İletişime geçin</h3>
+                <div style="display: flex; flex-direction: row;">
+                    <form class="form">
+                        <div class="form-group">
+                            <label for="name">Adınız:</label>
+                            <input class="input" type="text" placeholder="Adınız">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input class="input" type="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mesajınız:</label>
+                            <textarea class="input" placeholder="Mesajınız"></textarea>
+                        </div>
+                        <button class="button" type="submit">Gönder</button>
+                    </form>
+                </div>
+            </div>
+                <nav class="navbar-footer">
+                    <ul>
+                        <li><a href="">Çerez Politikası</a></li>
+                        <li><a href="">KVKK</a></li>
+                        <li><a href="">Gizlilik Politikası</a></li>
+                        <li><a href="">Çerez Tercihleri</a></li>
+                    </ul>
+                    <p class="footer-copy">
+                    ©2026 Visually Entertainment tüm hakları saklıdır
+                    </p>
+                </nav>
+    
+        </footer>
 
 
 
