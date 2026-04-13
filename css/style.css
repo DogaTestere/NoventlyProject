@@ -1,83 +1,176 @@
 :root {
-            --pearl-aqua: #99d5c9;
-            --pacific-blue: #6c969d;
-            --dusty-grape: #645e9d;
-            --dark-amethyst: #392b58;
-            --coffe-bean: #13010d;
-            --kirmizi: #e63946;
-            --koyu-kirmizi : #bd2a36;
-            --acik-kirmizi : rgba(230, 57, 70, 0.1);
-            --koyu-laciver: #111827;
-            --gri-metin : #4b5563;
-            --beyaz: #ffffff;;
-            --led-aksan-spectral-lime: #CCFF00;
-            --led-aksan-cyber-cyan: #00F3FF;
-            --gecis: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+    --pearl-aqua: #99d5c9;
+    --pacific-blue: #6c969d;
+    --dusty-grape: #645e9d;
+    --dark-amethyst: #392b58;
+    --coffe-bean: #13010d;
+    --kirmizi: #e63946;
+    --koyu-kirmizi : #bd2a36;
+    --acik-kirmizi : rgba(230, 57, 70, 0.1);
+    --koyu-laciver: #111827;
+    --gri-metin : #4b5563;
+    --beyaz: #ffffff;;
+    --led-aksan-spectral-lime: #CCFF00;
+    --led-aksan-cyber-cyan: #00F3FF;
+    --gecis: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-        .logo {
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 700;
-            background: linear-gradient(90deg, var(--dark-amethyst), var(--pacific-blue));
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--dark-amethyst), var(--pacific-blue));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
 
-        html{
-            scroll-behavior: smooth;
-        }
+html{
+    scroll-behavior: smooth;
+}
 
-        body {
-            color: var(--dark-amethyst);
-            line-height: 1.7;
-            background: var(--coffe-bean);
-            overflow-x: hidden;
-        }
+body {
+    color: var(--dark-amethyst);
+    line-height: 1.7;
+    background: var(--coffe-bean);
+    overflow-x: hidden;
+}
 
-        .container{
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-        .bolum.boslugu {
-            padding: 100 0;
-        }
+.bolum.boslugu {
+    padding: 100 0;
+}
 
-        a {
-            font-family: 'Inter', sans-serif;
-            color: var(--dusty-grape);
-            text-decoration: none;
-            transition: var(--gecis);
-        }
+a {
+    font-family: 'Inter', sans-serif;
+    color: var(--dusty-grape);
+    text-decoration: none;
+    transition: var(--gecis);
+}
 
-        button {
-            margin: 20px 20px;
-            background: var(--dark-amethyst);
-            color: var(--beyaz);
-            padding: 10px 20px;
-            cursor: pointer;
-            transition: var(--gecis);
-        }
+button {
+    margin: 20px 20px;
+    background: var(--dark-amethyst);
+    color: var(--beyaz);
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: var(--gecis);
+}
 
-        input {
-            transition: var(--gecis);
-        }
+input {
+    transition: var(--gecis);
+}
 
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
 
+.carousel-ul {
+    margin-top: 60px;
+    width: 100vw;
+    height: 300px;
+    padding: 20px;
+    display: flex;
+    gap: 4vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    anchor-name: --my-carousel;
+    scroll-marker-group: after;
+}
+
+.carousel-li {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  background-color: var(--dusty-grape);
+  border: 1px solid var(--dusty-grape);  
+  scroll-snap-align: center;
+  flex: 0 0 100%;
+}
+
+.carousel-ul::scroll-button(*) {
+  border: 0;
+  font-size: 2rem;
+  background: none;
+  color: black;
+  opacity: 0.7;
+  cursor: pointer;
+  position: absolute;
+  position-anchor: --my-carousel;
+}
+
+.carousel-ul::scroll-button(*):hover,
+.carousel-ul::scroll-button(*):focus {
+  opacity: 1;
+}
+
+.carousel-ul::scroll-button(*):active {
+  translate: 1px 1px;
+}
+
+.carousel-ul::scroll-button(*):disabled {
+  opacity: 0.2;
+  cursor: unset;
+}
+
+.carousel-ul::scroll-button(left) {
+  content: "◄" / "Previous";
+  right: calc(anchor(left) - 70px);
+  bottom: calc(anchor(top) + 13px);
+}
+
+.carousel-ul::scroll-button(right) {
+  content: "►" / "Next";
+  left: calc(anchor(right) - 70px);
+  bottom: calc(anchor(top) + 13px);
+}
+
+.carousel-ul::scroll-marker-group {
+  position: absolute;
+  position-anchor: --my-carousel;
+  top: calc(anchor(bottom) - 70px);
+  justify-self: anchor-center;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.carousel-li::scroll-marker {
+  content: attr(data-accName);
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 50%;
+  overflow: hidden;
+  text-indent: 16px;
+}
+
+.carousel-li::scroll-marker:target-current {
+  background-color: black;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex: 1;
+    min-height: 0;
+}
