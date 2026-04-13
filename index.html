@@ -1,48 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visually</title>
+    <title>Drone Show</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-    <body>
-        <header class="header led-header">
-            <div class="logo-area">
-                <h1 class="logo">Visually</h1>
-            </div>
-            <nav>
-                <ul>  
-                    <li><a href="index.html">Anasayfa</a></li>
-                    <li><a href="drone.html">Drone Showları</a></li>
-                    <li><a href="LED.html">LED Ekranlar</a></li>
-                    <li><a href="hologram.html">Hologram Sistemleri</a></li>
-                </ul>
-            </nav>
-        </header>
-        <ul class="carousel-ul">
-            <li class="carousel-li" data-accName="Item 1">
-                <img class="carousel-img" src="assests/Ana Sayfa/giant-LED-screen-7.jpg">
-                <h2>LED Ekranlar</h2>
-            </li>
-            <li class="carousel-li" data-accName="Item 2">
-                <img class="carousel-img" src="assests/Ana Sayfa/drone.jpeg">
-                <h2>Drone Showları</h2>
-            </li>
-            <li class="carousel-li" data-accName="Item 3">
-                <img class="carousel-img" src="assests/Ana Sayfa/hologram.jpeg">
-                <h2>Hologram Sistemleri</h2>
-            </li>
+<body>
+
+<!-- MENÜ -->
+<header>
+    <nav class="navbar">
+        <h1 class="logo">DRON ŞOV</h1>
+        <ul>
+            <li><a href="#">Ana Sayfa</a></li>
+            <li><a href="#drone">Drone Şov</a></li>
         </ul>
-    </body>
+    </nav>
+</header>
+
+<!-- DRONE SHOW BÖLÜMÜ -->
+<section id="drone" class="drone-section">
+    <div class="container">
+
+        <h2>Drone Şovlarımız</h2>
+
+        <p class="intro">
+            Gece gökyüzünü bir sahneye dönüştüren drone şovlarımız, teknoloji ve sanatı bir araya getirerek izleyicilere unutulmaz anlar yaşatır.
+        </p>
+
+        <!-- MAKALEN -->
+        <div class="article">
+            <h3>Drone Şov Nedir?</h3>
+            <p>
+                Drone şovları, yüzlerce hatta binlerce insansız hava aracının senkronize bir şekilde uçurulmasıyla oluşturulan görsel performanslardır. 
+                Bu şovlarda drone'lar LED ışıklarla donatılır ve belirlenen koordinatlara göre hareket ederek gökyüzünde şekiller, yazılar ve animasyonlar oluşturur.
+            </p>
+
+            <h3>Neden Drone Şov?</h3>
+            <p>
+                Geleneksel havai fişek gösterilerine çevre dostu bir alternatif olan drone şovları, yeniden programlanabilir yapıları sayesinde her etkinliğe özel tasarlanabilir.
+                Sessiz çalışmaları ve güvenli yapıları sayesinde konserlerden düğünlere kadar birçok organizasyonda tercih edilmektedir.
+            </p>
+
+            <h3>Bizim Farkımız</h3>
+            <p>
+                SkyShow olarak en son teknolojileri kullanarak yüksek hassasiyetli uçuşlar gerçekleştiriyoruz. 
+                Her proje için özel tasarım yapıyor, müşterilerimize tamamen özgün görsel deneyimler sunuyoruz.
+            </p>
+        </div>
+
+        <button class="cta">Teklif Al</button>
+
+    </div>
+</section>
+
+<div class="events">
+
+    <h2>Drone Şov Etkinliklerimiz</h2>
+
+    <div class="event-cards">
+
+        <div class="card">
+            <h3>Düğün Organizasyonları</h3>
+            <p>
+                En özel gününüzü unutulmaz kılmak için gökyüzünde isimleriniz ve özel figürlerle romantik drone şovları sunuyoruz.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Konser & Festival</h3>
+            <p>
+                Büyük sahne etkinliklerinde müzikle senkronize ışık şovlarıyla izleyicilere görsel bir şölen yaşatıyoruz.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Kurumsal Lansmanlar</h3>
+            <p>
+                Marka tanıtımlarında logonuzu ve mesajınızı gökyüzüne taşıyarak güçlü bir etki yaratıyoruz.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="drone-animation">
+    <div id="animation-area"></div>
+</div>
+
+
+
+<script src="script.js" defer></script>
+
+</body>
 </html>
-
-    
-
-
-
-
-
