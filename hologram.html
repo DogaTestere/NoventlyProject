@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="./css/hologram.css" />
   </head>
   <body class="hologram">
-    <header class="header">
+    <header class="header led-header">
       <div class="logo-area">
-        <img src="assests/logo.png" alt="logo" />
+        <h1 class="logo">Visually</h1>
       </div>
       <nav>
-        <ul>
-          <li><a href="./index.html">Anasayfa</a></li>
-          <li><a href="">Drone Showları</a></li>
-          <li><a href="">LED Ekranlar</a></li>
+        <ul>  
+            <li><a href="index.html">Anasayfa</a></li>
+            <li><a href="drone.html">Drone Showları</a></li>
+            <li><a class="led-text" href="LED.html">LED Ekranlar</a></li>
+            <li><a href="hologram.html">Hologram Sistemleri</a></li>
         </ul>
       </nav>
     </header>
@@ -61,19 +62,40 @@
 
     <br>
 
-    <footer>
-      <div class="logo-footer">Visually</div>
-      <nav class="navbar-footer">
-        <ul>
-          <li><a href="">Çerez Politikası</a></li>
-          <li><a href="">KVKK</a></li>
-          <li><a href="">Gizlilik Politikası</a></li>
-          <li><a href="">Çerez Tercihleri</a></li>
-        </ul>
-      </nav>
-      <p class="footer-copy">
-        ©2026 Visually Entertainment tüm hakları saklıdır
-      </p>
-    </footer>
+    <footer class="footer">
+            <div>
+                <h1 class="logo">Visually</h1>
+                <h3>İletişime geçin</h3>
+                <div style="display: flex; flex-direction: row;">
+                    <form class="form">
+                        <div class="form-group">
+                            <label for="name">Adınız:</label>
+                            <input class="input" type="text" placeholder="Adınız">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input class="input" type="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mesajınız:</label>
+                            <textarea class="input" placeholder="Mesajınız"></textarea>
+                        </div>
+                        <button class="button" type="submit">Gönder</button>
+                    </form>
+                </div>
+            </div>
+                <nav class="navbar-footer">
+                    <ul>
+                        <li><a href="">Çerez Politikası</a></li>
+                        <li><a href="">KVKK</a></li>
+                        <li><a href="">Gizlilik Politikası</a></li>
+                        <li><a href="">Çerez Tercihleri</a></li>
+                    </ul>
+                    <p class="footer-copy">
+                    ©2026 Visually Entertainment tüm hakları saklıdır
+                    </p>
+                </nav>
+    
+        </footer>
   </body>
 </html>
