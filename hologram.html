@@ -12,10 +12,11 @@
       rel="stylesheet"
     />
 
-    <script src="js/hologram.js"></script>
+		<script src="js/carousel.js" defer></script>
 
     <title>Hologram Sistemleri</title>
   </head>
+	
   <body class="hologram">
     <header class="header led-header">
       <div class="logo-area">
@@ -34,64 +35,107 @@
     </header>
 
     <section class="showcase">
-      <h2 class="flicker">Şuan Gösterimde Olan Etkinliklerimiz</h2>
-      <div class="continuous-carousel" id="showcase-continuous">
-        <div class="continuous-track">
-          <div class="showcase-card">
-            <img src="assests/hg-img1.jpg" alt="Show 1" />
-            <div class="showcase-info">
-              <h3>Kuantumla Dans</h3>
-              <p class="show-date">12 Nisan 2026</p>
-              <p class="show-desc">
-                Işık, hareket ve ritmin kusursuz birleşimi… <br />
-                Bu etkileyici dans gösterisinde performansçı, holografik
-                parçacıklar, enerji akışları ve kozmik sahnelerle senkronize bir
-                şekilde hareket eder. <br />Her adım, dijital evrenle etkileşime
-                girerek sahnede yaşayan bir görsel şölen yaratır. Modern dans
-                ile ileri teknoloji birleşerek izleyiciyi adeta başka bir boyuta
-                taşır.
-              </p>
-            </div>
-          </div>
-          <div class="showcase-card">
-            <img src="assests/hg-img2.jpg" alt="Show 2" />
-            <div class="showcase-info">
-              <h3>Su İlüzyonu</h3>
-              <p class="show-date">16 Nisan 2026</p>
-              <p class="show-desc">
-                Dans ve ışığın büyüleyici uyumu… <br />
-                Performans sanatçısı; su, sis ve enerji efektlerini andıran
-                holografik görsellerle etkileşime girerek izleyiciyi gerçek ile
-                illüzyon arasındaki çizgide bir yolculuğa çıkarıyor. <br />
-                Duygusal ve görsel açıdan etkileyici bir deneyim sunar.
-              </p>
-            </div>
-          </div>
-          <div class="showcase-card">
-            <img src="assests/hg-img3.jpg" alt="Show 3" />
-            <div class="showcase-info">
-              <h3>Apollonun Yankıları</h3>
-              <p class="show-date">26 Nisan 2026</p>
-              <p class="show-desc">
-                İnsanlığın Ay’a uzanan yolculuğuna tanıklık edin. <br />
-                Gerçekçi bir holografik astronot eşliğinde, uzay keşfinin perde
-                arkasındaki hikâyeler yeniden hayat buluyor.<br />
-                Arşiv anlatımları ve ileri düzey projeksiyon teknolojisinin
-                birleşimiyle tarih, adeta karşınızda canlanıyor.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="slider">
+			<button class="slider--btn slider--btn__prev">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<path d="m15 18-6-6 6-6" />
+				</svg>
+			</button>
+
+			<div class="slides__wrapper">
+				<div class="slides">
+					<div class="slide" data-current>
+						<div class="slide__inner">
+							<div class="slide--image__wrapper">
+								<img class="slide--image" src="./assests/hg-img1.jpg" alt="Image 1" />
+							</div>
+						</div>
+					</div>
+					<div class="slide__bg" style="--bg: url('./assests/hg-img1.jpg'); --dir: 0" data-current></div>
+
+				<div class="slide" data-next>
+					<div class="slide__inner">
+						<div class="slide--image__wrapper">
+							<img class="slide--image" src="./assests/hg-img2.jpg" alt="Image 2" />
+						</div>
+					</div>
+				</div>
+				<div class="slide__bg" style="--bg: url('./assests/hg-img2.jpg'); --dir: 0" data-next></div>
+
+				<div class="slide" data-previous>
+					<div class="slide__inner">
+						<div class="slide--image__wrapper">
+							<img class="slide--image" src="./assests/hg-img3.jpg" alt="Image 3" />
+						</div>
+					</div>
+				</div>
+				<div class="slide__bg" style="--bg: url('./assests/hg-img3.jpg'); --dir: 0" data-previous></div>
+			</div>
+			<div class="slides--infos">
+				<!-- Slide Info 1 -->
+				<div class="slide-info" data-current>
+					<div class="slide-info__inner">
+						<div class="slide-info--text__wrapper">
+							<div data-title class="slide-info--text">
+								<span>Kuantumla Dans</span>
+							</div>
+							<div data-subtitle class="slide-info--text">
+								<span>12 Nisan 2026</span>
+							</div>
+							<div data-description class="slide-info--text">
+								<span>Işık, hareket ve ritmin kusursuz birleşimi...</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Slide Info 2 -->
+				<div class="slide-info" data-next>
+					<div class="slide-info__inner">
+						<div class="slide-info--text__wrapper">
+							<div data-title class="slide-info--text">
+								<span>Su İllüzyonu</span>
+							</div>
+							<div data-subtitle class="slide-info--text">
+								<span>16 Nisan 2026</span>
+							</div>
+							<div data-description class="slide-info--text">
+								<span>Dans ve ışığın su gibi akışını izleyin</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Slide Info 3 -->
+				<div class="slide-info" data-previous>
+					<div class="slide-info__inner">
+						<div class="slide-info--text__wrapper">
+							<div data-title class="slide-info--text">
+								<span>Apollonun Yankıları</span>
+							</div>
+							<div data-subtitle class="slide-info--text">
+								<span>26 Nisan 2026</span>
+							</div>
+							<div data-description class="slide-info--text">
+								<span>İnsanlığın Ay'a uzanan yolculuğuna tanıklık edin</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button class="slider--btn slider--btn__next">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+			<path d="m9 18 6-6-6-6" />
+		</svg>
+	</button>
+	</div>
+
 
     <section class="clients">
       <h2 class="flicker">Müşterilerimiz</h2>
-      <div class="js-carousel" id="clients-carousel">
-        <button class="carousel-btn prev">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-
+      <div class="js-carousel">
         <div class="carousel-viewport">
           <ul class="carousel-track">
             <li class="carousel-slide">
@@ -153,10 +197,6 @@
             </li>
           </ul>
         </div>
-
-        <button class="carousel-btn next">
-          <i class="fas fa-chevron-right"></i>
-        </button>
       </div>
     </section>
 
@@ -196,5 +236,9 @@
         </p>
       </nav>
     </footer>
+
+	<div class="loader">
+		<span class="loader__text">0%</span>
+	</div>
   </body>
 </html>
