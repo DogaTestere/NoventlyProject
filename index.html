@@ -19,6 +19,9 @@
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="js/carousel.js" defer></script>
+
     <title>Visually</title>
   </head>
   <body>
@@ -31,27 +34,164 @@
           <li><a href="index.html">Anasayfa</a></li>
           <li><a href="drone.html">Drone Showları</a></li>
           <li><a class="led-text" href="LED.html">LED Ekranlar</a></li>
-          <li><a class="hologram flicker" href="hologram.html">Hologram Sistemleri</a></li>
+          <li>
+            <a class="hologram flicker" href="hologram.html"
+              >Hologram Sistemleri</a
+            >
+          </li>
         </ul>
       </nav>
     </header>
-    <ul class="carousel-ul">
-      <li class="carousel-li" data-accName="Item 1">
-        <img
-          class="carousel-img"
-          src="assests/Ana Sayfa/giant-LED-screen-7.jpg"
-        />
-        <h2>LED Ekranlar</h2>
-      </li>
-      <li class="carousel-li" data-accName="Item 2">
-        <img class="carousel-img" src="assests/Ana Sayfa/drone.jpg" />
-        <h2>Drone Showları</h2>
-      </li>
-      <li class="carousel-li" data-accName="Item 3">
-        <img class="carousel-img" src="assests/Ana Sayfa/hologram.jpg" />
-        <h2>Hologram Sistemleri</h2>
-      </li>
-    </ul>
+
+    <div class="slider">
+      <button class="slider--btn slider--btn__prev">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="m15 18-6-6 6-6" />
+        </svg>
+      </button>
+
+      <div class="slides__wrapper">
+        <div class="slides">
+          <div class="slide" data-current>
+            <div class="slide__inner">
+              <div class="slide--image__wrapper">
+                <img
+                  class="slide--image"
+                  src="./assests/Ana Sayfa/giant-LED-screen-7.jpg"
+                  alt="Image 1"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="slide__bg"
+            style="
+              --bg: url(&quot;./assests/Ana Sayfa/giant-LED-Screen-7.jpg&quot;);
+              --dir: 0;
+            "
+            data-current
+          ></div>
+
+          <div class="slide" data-next>
+            <div class="slide__inner">
+              <div class="slide--image__wrapper">
+                <img
+                  class="slide--image"
+                  src="./assests/Ana Sayfa/drone.jpg"
+                  alt="Image 2"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="slide__bg"
+            style="
+              --bg: url(&quot;./assests/Ana Sayfa/drone.jpg&quot;);
+              --dir: 0;
+            "
+            data-next
+          ></div>
+
+          <div class="slide" data-previous>
+            <div class="slide__inner">
+              <div class="slide--image__wrapper">
+                <img
+                  class="slide--image"
+                  src="./assests/Ana Sayfa/hologram.jpg"
+                  alt="Image 3"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="slide__bg"
+            style="
+              --bg: url(&quot;./assests/Ana Sayfa/hologram.jpg&quot;);
+              --dir: 0;
+            "
+            data-previous
+          ></div>
+        </div>
+        <div class="slides--infos">
+          <!-- Slide Info 1 -->
+          <div class="slide-info" data-current>
+            <div class="slide-info__inner">
+              <div class="slide-info--text__wrapper">
+                <div data-title class="slide-info--text">
+                  <span>LED Ekranlar</span>
+                </div>
+                <div data-subtitle class="slide-info--text">
+                  <span></span>
+                </div>
+                <div data-description class="slide-info--text">
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide Info 2 -->
+          <div class="slide-info" data-next>
+            <div class="slide-info__inner">
+              <div class="slide-info--text__wrapper">
+                <div data-title class="slide-info--text">
+                  <span>Drone Showları</span>
+                </div>
+                <div data-subtitle class="slide-info--text">
+                  <span></span>
+                </div>
+                <div data-description class="slide-info--text">
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide Info 3 -->
+          <div class="slide-info" data-previous>
+            <div class="slide-info__inner">
+              <div class="slide-info--text__wrapper">
+                <div data-title class="slide-info--text">
+                  <span>Hologram Sistemleri</span>
+                </div>
+                <div data-subtitle class="slide-info--text">
+                  <span></span>
+                </div>
+                <div data-description class="slide-info--text">
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="slider--btn slider--btn__next">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="m9 18 6-6-6-6" />
+        </svg>
+      </button>
+    </div>
 
     <div class="logo-band">
       <div class="logo-track">
@@ -104,5 +244,9 @@
         </p>
       </nav>
     </footer>
+
+    <div class="loader">
+      <span class="loader__text">0%</span>
+    </div>
   </body>
 </html>
